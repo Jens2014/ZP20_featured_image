@@ -1,6 +1,6 @@
 <?php 
 /**
- * Part of the featured_image plugin for Zenphoto
+ * Part of the featured_image plugin for Zenphoto20
  *
  * @author Malte Müller, Jens Koßmagk
  * @license: GPL v3 or later
