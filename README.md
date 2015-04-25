@@ -26,4 +26,5 @@ if($featuredimage) { // if an feature image exists use the object model
 Requirement: Zenpage CMS plugin and a theme supporting it
 
 License: GPL v3
+
 Based on acrylians [featured_image](https://github.com/acrylian/featured_image) for ZenPhoto.
