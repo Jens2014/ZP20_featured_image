@@ -1,4 +1,3 @@
-<?php
 /**
  * This plugin provides a functionality to assign an image from your albums to an Zenpage news article, category or page as a "featured image".
  * You can use this image for example for headers of your single article/page/category pages or within the news article list as a thumbnail. 
@@ -22,16 +21,16 @@
  *  
  * Requirement: Zenpage CMS plugin and a theme supporting it
  *
- * @author Malte Müller (acrylian) <info@maltem.de>
- * @copyright 2014 Malte Müller
+ * @author JeKoPhoto
+ * @copyright 2014-2015 Malte Müller, Jens Kossmagk
  * @license: GPL v3 or later
  * @package plugins
  * @subpackage misc
  */
 $plugin_is_filter = 5|ADMIN_PLUGIN|THEME_PLUGIN;
 $plugin_description = gettext("Attach an image to a Zenpage news article, category or page.");
-$plugin_author = "Malte Müller (acrylian)";
-$plugin_version = '1.1.1';
+$plugin_author = "Jens Kossmagk (JeKoPhoto)";
+$plugin_version = '1.0.0';
 $plugin_disable = (!getOption('zp_plugin_zenpage'))?gettext('The Zenpage CMS plugin is required for this and not enabled!'):false;
 if(getOption('zp_plugin_zenpage')) {
   zp_register_filter('publish_article_utilities','featuredImage::getFeaturedImageSelector');
@@ -253,13 +252,13 @@ class featuredImage {
 	static function getFeaturedImageType($obj) {
 		if(is_object($obj)) {
 			switch(get_class($obj)) {
-				case 'ZenpageNews':
-					return 'featuredimage_article'; 
-				case 'ZenpageCategory':
+				case 'Article':
+					return 'featuredimage_article';
+				case 'Category':
 					return 'featuredimage_category';
-				case 'ZenpagePage':
+				case 'Page':
 					return 'featuredimage_page';
-				default: 
+				default:
 					return false;
 			}
 		} 
