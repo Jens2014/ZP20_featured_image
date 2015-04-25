@@ -2,12 +2,12 @@
 /**
  * Part of the featured_image plugin for Zenphoto
  *
- * @author Malte Müller (acrylian) <info@maltem.de>
+ * @author Malte Müller, Jens Koßmagk
  * @license: GPL v3 or later
  */
 require_once(dirname(dirname(dirname(__FILE__)))."/zp-core/admin-globals.php");
 admin_securityChecks(ZENPAGE_PAGES_RIGHTS | ZENPAGE_NEWS_RIGHTS, '');
-require_once(SERVERPATH.'/'.ZENFOLDER.'/'.PLUGIN_FOLDER."/zenpage/zenpage-template-functions.php");
+require_once(SERVERPATH.'/'.ZENFOLDER.'/'.PLUGIN_FOLDER."/zenpage/template-functions.php");
  
 // current featured image
 if (isset($_GET['featuredimage'])) {
