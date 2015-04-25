@@ -1,3 +1,4 @@
+<?php
 /**
  * This plugin provides a functionality to assign an image from your albums to an Zenpage news article, category or page as a "featured image".
  * You can use this image for example for headers of your single article/page/category pages or within the news article list as a thumbnail. 
